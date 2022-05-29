@@ -7,4 +7,5 @@ npx tailwindcss init tailwind.config.cjs -p &&
 mv postcss.config.js postcss.config.cjs &&
 git add . &&
 git commit -m "Initial commit" &&
-git push origin main
+git push origin main &&
+rm sveltetail.sh
