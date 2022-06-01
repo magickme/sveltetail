@@ -32,8 +32,12 @@ echo "module.exports = {
 }" > ./tailwind.config.cjs &&
 echo "@tailwind base; @tailwind components; @tailwind utilities;" > ./src/app.css &&
 echo "<script>import '../app.css';</script><slot />" > ./src/routes/__layout.svelte &&
+npm i -D vitest vitest-svelte-kit &&
+npm i -D @testing-library/svelte &&
+echo "import { extractFromSvelteConfig } from "vitest-svelte-kit"; export default extractFrom SvelteConfig();" > ./vitest.config.js &&
 git add . &&
 git commit -m "Initial commit" &&
 git push origin main &&
 rm sveltetail.sh &&
-npm run dev -- --open
+npm run dev -- --open &&
+printf "Script complete. Make sure to set Vitest as you test suite in package.json\n"
